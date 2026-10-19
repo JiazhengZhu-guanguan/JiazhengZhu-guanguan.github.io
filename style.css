@@ -772,3 +772,24 @@ img {
     width: 100%;
   }
 }
+
+/* ===== Email contact dialog ===== */
+.email-dialog {
+  margin: auto;
+  width: min(460px, calc(100% - 2rem));
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: var(--font-body);
+}
+.email-dialog::backdrop { background: rgba(8, 15, 26, 0.65); }
+.email-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.email-dialog-header h2 { font-family: var(--font-heading); font-size: 1.3rem; }
+.email-dialog-close { border: 0; background: transparent; color: inherit; font-size: 1.8rem; cursor: pointer; }
+.email-address { font-size: 1.15rem; font-weight: 600; overflow-wrap: anywhere; user-select: all; margin: 0.4rem 0 1.2rem; }
+.email-dialog-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.email-copy { padding: 0.5rem 0.8rem; border: 0; border-radius: 3px; background: var(--color-primary); color: #fff; font: inherit; cursor: pointer; }
+.email-copy-status { min-height: 1.7em; margin-top: 0.5rem; }
+.email-dialog-note { font-size: 0.9rem; color: var(--color-text-light); }

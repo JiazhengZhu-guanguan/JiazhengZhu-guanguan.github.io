@@ -1,5 +1,26 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function () {
+  // Show a usable contact address even in browsers without a mailto handler.
+  const emailDialog = document.querySelector('#email-dialog');
+  if (emailDialog && typeof emailDialog.showModal === 'function') {
+    const copyStatus = emailDialog.querySelector('.email-copy-status');
+    document.querySelectorAll('a[href="mailto:jiazheng@mail.ustc.edu.cn"]:not([data-email-compose])').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        copyStatus.textContent = '';
+        emailDialog.showModal();
+      });
+    });
+    emailDialog.querySelector('.email-copy').addEventListener('click', async function () {
+      try {
+        await navigator.clipboard.writeText('jiazheng@mail.ustc.edu.cn');
+        copyStatus.textContent = 'Email address copied.';
+      } catch (error) {
+        copyStatus.textContent = 'Please select and copy the email address above.';
+      }
+    });
+  }
+
   const toggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.navbar-links');
 

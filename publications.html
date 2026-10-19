@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications - Jiazheng Zhu</title>
-  <meta name="description" content="Publications by Jiazheng Zhu in time-domain astrophysics, optical transients, and tidal disruption events.">
+  <title>Publications | Jiazheng Zhu | Time-Domain Astrophysics</title>
+  <meta name="description" content="Publications by Jiazheng Zhu (朱家正), an astrophysics Ph.D. candidate at USTC, on tidal disruption events, optical transients, and supernovae.">
+  <meta name="author" content="Jiazheng Zhu (朱家正)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jiazheng Zhu">
+  <meta property="og:title" content="Publications | Jiazheng Zhu | Time-Domain Astrophysics">
+  <meta property="og:description" content="Publications by Jiazheng Zhu (朱家正), an astrophysics Ph.D. candidate at USTC, on tidal disruption events, optical transients, and supernovae.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Publications | Jiazheng Zhu | Time-Domain Astrophysics">
+  <meta name="twitter:description" content="Publications by Jiazheng Zhu (朱家正), an astrophysics Ph.D. candidate at USTC, on tidal disruption events, optical transients, and supernovae.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -245,12 +253,28 @@
   <footer class="footer">
     <ul class="footer-links">
       <li><a href="mailto:jiazheng@mail.ustc.edu.cn"><i class="fas fa-envelope"></i> Email</a></li>
-      <li><a href="https://orcid.org/0000-0003-3824-9496" target="_blank"><i class="fab fa-orcid"></i> ORCID</a></li>
-      <li><a href="https://github.com/guanguan-bot" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+      <li><a href="https://orcid.org/0000-0003-3824-9496" target="_blank" rel="me noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a></li>
+      <li><a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Zhu%2C%20Jiazheng%22" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i> ADS author search</a></li>
       <li><a href="CV_jiazheng.pdf" target="_blank"><i class="fas fa-file-alt"></i> CV</a></li>
     </ul>
     <p>&copy; 2026 Jiazheng Zhu. University of Science and Technology of China.</p>
   </footer>
+
+  <!-- Visible email contact also works when no mail application is configured. -->
+  <dialog class="email-dialog" id="email-dialog" aria-labelledby="email-dialog-title">
+    <form method="dialog" class="email-dialog-header">
+      <h2 id="email-dialog-title">Contact Jiazheng Zhu</h2>
+      <button class="email-dialog-close" aria-label="Close email contact">&times;</button>
+    </form>
+    <p>Email address</p>
+    <p class="email-address">jiazheng@mail.ustc.edu.cn</p>
+    <div class="email-dialog-actions">
+      <button type="button" class="email-copy">Copy email address</button>
+      <a href="mailto:jiazheng@mail.ustc.edu.cn" data-email-compose>Open email app</a>
+    </div>
+    <p class="email-copy-status" role="status" aria-live="polite"></p>
+    <p class="email-dialog-note">You can also paste this address into your webmail. Opening an email app requires a configured mail application.</p>
+  </dialog>
 
   <script src="main.js"></script>
 </body>
